@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@aztec/bb.js": "3.0.0-nightly.20260102",
-    "@noir-lang/noir_js": "1.0.0-beta.18",
+    "@noir-lang/noir_js": "1.0.0-rc.5",
     "@openfort/react": "^0.2.7",
     "@tanstack/react-query": ">=5.45.1",
     "react": "^18.2.0",
