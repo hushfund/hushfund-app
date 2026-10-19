@@ -1,0 +1,54 @@
+{
+  "name": "hushfund-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:strict": "tsc -b && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc -b --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "3.0.0-nightly.20260102",
+    "@noir-lang/noir_js": "1.0.0-beta.18",
+    "@openfort/react": "^0.2.7",
+    "@tanstack/react-query": ">=5.45.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "viem": "2.38.2",
+    "wagmi": "^2.17.5"
+  },
+  "overrides": {
+    "axios": "1.20.0",
+    "ws": "8.22.0",
+    "source-map-js": "1.2.2",
+    "uuid@<11.1.1": "11.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.3.4",
+    "buffer": "^6.0.3",
+    "typescript": "~5.8.3",
+    "vite": "^6.4.1"
+  },
+  "packageManager": "pnpm@10.16.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "Hushfund web app for private USDC notes, yield, withdrawals, borrowing and repayment.",
+  "author": "Hushfund",
+  "license": "MIT",
+  "homepage": "https://hushfund.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hushfund/hushfund-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hushfund/hushfund-app/issues",
+    "email": "hello@husfund.app"
+  },
+  "private": true
+}

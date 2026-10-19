@@ -1,0 +1,21 @@
+/* Landing-only decorative hash backdrop */
+body:has(.hf-landing){overflow-x:clip}
+.hf-landing{position:relative;isolation:isolate}
+.hf-landing>section{position:relative;z-index:1}
+.hashfield{position:absolute;z-index:0;top:-120px;bottom:-40px;left:calc(50% - 50vw);width:100vw;overflow:hidden;pointer-events:none;user-select:none;contain:strict}
+.hf-cols{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:0 12px;padding-inline:12px}
+.hf-col{overflow:hidden;min-width:0}
+.hf-track{will-change:transform;animation:hfDrift 60s linear infinite}
+.hf-track span{display:block;font-family:var(--mono);font-size:12px;line-height:22px;letter-spacing:.02em;color:rgba(215,247,0,.34);white-space:nowrap}
+.hf-track span:nth-child(5n+2){color:rgba(215,247,0,.16)}
+.hf-track span:nth-child(7n+3){color:rgba(215,247,0,.5)}
+@keyframes hfDrift{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.hashfield.paused .hf-track{animation-play-state:paused}
+.hf-shade{position:absolute;inset:0;background:
+  linear-gradient(90deg,var(--page) 0%,rgba(9,9,10,.94) 30%,rgba(9,9,10,.78) 50%,rgba(9,9,10,.35) 75%,rgba(9,9,10,.5) 100%),
+  linear-gradient(180deg,var(--page) 0%,transparent 18%,transparent 55%,rgba(9,9,10,.85) 82%,var(--page) 100%)}
+@media (max-width:700px){
+  .hf-track span{font-size:11px}
+  .hf-shade{background:linear-gradient(180deg,var(--page),rgba(9,9,10,.82) 30%,rgba(9,9,10,.9) 70%,var(--page))}
+}
+@media (prefers-reduced-motion:reduce){.hf-track{animation:none!important;transform:translateY(-12%)}}

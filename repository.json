@@ -1,0 +1,15 @@
+{
+  "name": "hushfund-app",
+  "description": "Hushfund web app for private USDC notes, yield, withdrawals, borrowing and repayment.",
+  "homepage": "https://hushfund.app",
+  "visibility": "public",
+  "topics": [
+    "hushfund",
+    "ethereum",
+    "usdc",
+    "mainnet",
+    "open-source"
+  ],
+  "has_wiki": false,
+  "has_projects": false
+}
